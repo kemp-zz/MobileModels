@@ -322,45 +322,99 @@ proxy-groups:
   - name: docker-registry
     type: select
     proxies:
-      - AUTO
-      - HK AUTO
-      - SG AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: github-proxy
     type: select
     proxies:
-      - AUTO
-      - US AUTO
-      - JP AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: nvidia-driver
     type: select
     proxies:
-      - US AUTO
-      - SG AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: cloudflare-cdn
     type: select
     proxies:
-      - AUTO
-      - HK AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: tum-portal
     type: select
     proxies:
-      - SG AUTO
-      - JP AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: ubuntu-apt
     type: select
     proxies:
-      - AUTO
-      - US AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: pytorch-install
     type: select
     proxies:
-      - US AUTO
-      - SG AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: ros-packages
     type: select
     proxies:
-      - AUTO
-      - JP AUTO
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
 rule-providers:
   LocalAreaNetwork:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
@@ -605,11 +659,11 @@ rules:
   - "RULE-SET,Download,全球直连"
   - "GEOIP,CN,全球直连"
   - "MATCH,漏网之鱼"
-  - '- DOMAIN-SUFFIX,docker.io,docker-registry'
-  - '- DOMAIN-SUFFIX,github.com,github-proxy'
-  - '- DOMAIN-SUFFIX,nvidia.com,nvidia-driver'
-  - '- DOMAIN-SUFFIX,cloudflare.com,cloudflare-cdn'
-  - '- DOMAIN-SUFFIX,ubuntu.com,ubuntu-apt'
-  - '- DOMAIN-SUFFIX,tum.de,tum-portal'
-  - '- DOMAIN-SUFFIX,pytorch.org,pytorch-install'
-  - '- DOMAIN-SUFFIX,ros.org,ros-packages'
+  - 'DOMAIN-SUFFIX,docker.io,docker-registry'
+  - 'DOMAIN-SUFFIX,github.com,github-proxy'
+  - 'DOMAIN-SUFFIX,nvidia.com,nvidia-driver'
+  - 'DOMAIN-SUFFIX,cloudflare.com,cloudflare-cdn'
+  - 'DOMAIN-SUFFIX,ubuntu.com,ubuntu-apt'
+  - 'DOMAIN-SUFFIX,tum.de,tum-portal'
+  - 'DOMAIN-SUFFIX,pytorch.org,pytorch-install'
+  - 'DOMAIN-SUFFIX,ros.org,ros-packages'
